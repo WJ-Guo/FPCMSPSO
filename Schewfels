@@ -1,0 +1,7 @@
+function schewfeled = Schewfels(Swarm,M1,M2,shifto,lambda10,lambda100)
+   [SwarmSize, Dim] = size(Swarm);
+   schewfeled=0;
+    for i=1:Dim
+        schewfeled=schewfeled-(abs(Swarm(:,i))<=500).*(Swarm(:,i).*sin(sqrt(abs(Swarm(:,i)))))+(abs(Swarm(:,i))>500).*0.001.*(500-abs(Swarm(:,i))).^2;
+    end
+    schewfeled=4.189828872724338e+002*Dim+schewfeled;
