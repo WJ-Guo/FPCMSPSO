@@ -1,0 +1,4 @@
+function Sphered = Sphere(Swarm,M1,M2,shifto,lambda10,lambda100)
+   [SwarmSize, Dim] = size(Swarm);
+    Sphered =  sum(Swarm.^2,2);
+    
