@@ -1,0 +1,15 @@
+function Weierstrassed = Weierstrass(Swarm,M1,M2,shifto,lambda10,lambda100)
+   [SwarmSize,Dim] = size(Swarm);
+    Swarm = Swarm + 0.5;
+    a = 0.5;
+    b = 3;
+    kmax = 20;
+	part1=zeros (SwarmSize,Dim);
+	part2=0;
+	for k = 0:kmax 
+	    part1 = part1 + a.^k.*cos(2*pi*b.^k.* Swarm);
+		part2 = part2 + a.^k.*cos(2*pi*b.^k.* 0.5);
+	end
+	
+	Weierstrassed = sum (part1, 2)- Dim.*part2;
+	
