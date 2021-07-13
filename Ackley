@@ -1,0 +1,6 @@
+function ackleyed = Ackley(Swarm,M1,M2,shifto,lambda10,lambda100)
+   [SwarmSize, Dim] = size(Swarm);
+    part1 = sum(Swarm.^2,2)./Dim;
+	 part2 = sum( cos(2.*pi.*Swarm),2 )./Dim;
+	
+    ackleyed =20-20.*exp(-0.2 .*sqrt(part1))-exp(part2)+exp(1);
