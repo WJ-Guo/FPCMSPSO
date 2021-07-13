@@ -1,0 +1,8 @@
+function NoisyQuarticed = NoisyQuartic(Swarm,M1,M2,shifto,lambda10,lambda100)
+    [SwarmSize,Dim] = size(Swarm);
+    NoisyQuarticed = 0;
+    for i=1:Dim
+        NoisyQuarticed = NoisyQuarticed + i.*Swarm(:,i).^4;
+    end
+    NoisyQuarticed = NoisyQuarticed + rand(SwarmSize,1);
+end
