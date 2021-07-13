@@ -1,0 +1,7 @@
+function griewanked = Griewank(Swarm,M1,M2,shifto,lambda10,lambda100)
+   [SwarmSize, Dim] = size(Swarm);
+    part2 = 1;
+    for i=1:Dim
+        part2 = part2.*cos(Swarm(:,i)./sqrt(i));
+    end
+    griewanked = sum((Swarm.^2)./4000,2) - part2 + 1;
