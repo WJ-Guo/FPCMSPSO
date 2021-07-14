@@ -1,0 +1,14 @@
+%The Dminima function for use with the psotoolbox
+%
+% Function Description:
+% Equation ->  sum (x(i)^2 - 10 * cos(2 * pi * x(i)) + 10)
+%      xmin  = [0, 0, 0.....0]  (all zeoes)??
+%      fxmin = 0                  (zero)??
+% -5.12 <=x(i) <= 5.12     
+% if (abs(x(i)) then x(i)=x(i); else  x(i) = round(2*x(i))/2
+function Dminimaed = Dminima(Swarm,M1,M2,shifto,lambda10,lambda100)
+    
+	[SwarmSize, Dim] = size(Swarm);
+ 	
+	
+    Dminimaed = 78.332331408 + sum(( ((Swarm .^4) - 16.*(Swarm .^2) + 5.*Swarm)/Dim  )' )';
